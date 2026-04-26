@@ -36,6 +36,11 @@ const router = createRouter({
             component: () => import('../views/telegram/Mail.vue')
         },
         {
+            path: '/quick',
+            alias: "/:lang/quick",
+            component: () => import('../views/Quick.vue')
+        },
+        {
             name: 'not-found',
             path: '/:pathMatch(.*)*',
             redirect: '/'

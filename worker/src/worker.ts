@@ -5,6 +5,7 @@ import { Jwt } from 'hono/utils/jwt'
 
 import { api as commonApi } from './commom_api';
 import { api as openAuthApi } from './open_api/auth';
+import { api as quickMailApi } from './open_api/quick_mail';
 import { api as mailsApi } from './mails_api'
 import { api as userApi } from './user_api';
 import { api as adminApi } from './admin_api';
@@ -255,6 +256,7 @@ app.use('/admin/*', async (c, next) => {
 
 app.route('/', commonApi)
 app.route('/', openAuthApi)
+app.route('/', quickMailApi)
 app.route('/', mailsApi)
 app.route('/', userApi)
 app.route('/', adminApi)
